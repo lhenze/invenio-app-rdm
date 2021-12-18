@@ -19,6 +19,8 @@
 .ui.items > .item .extra {
     color:#666666;
 }
+
+/* Override style from webpack:///node_modules/semantic-ui-less/definitions/views/item.less line 215 */
 .ui.items > .item .meta * {
-    margin-right: 0.1em;
+    margin-right: unset;
 }
