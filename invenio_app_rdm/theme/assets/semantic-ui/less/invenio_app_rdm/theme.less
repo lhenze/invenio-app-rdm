@@ -337,7 +337,7 @@ body {
   width: 16px;
   vertical-align: middle;
   margin-bottom: 3px;
-  padding-right: 3px;
+  padding: 0px;
 }
 
 
@@ -476,8 +476,15 @@ body {
     margin-right:.5rem;
     white-space: nowrap;
   }
-
   a {
     color: #646464;
+    display: inline-block;
+    padding-right: 4px;
+    &:last-of-type {
+      padding-right: 0px;
+    }
+  }
+  sup {
+    margin-left: 0.3rem;
   }
 }
