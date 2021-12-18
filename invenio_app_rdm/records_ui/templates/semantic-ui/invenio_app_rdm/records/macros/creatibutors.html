@@ -21,29 +21,29 @@
 <a href="{{ identifier[0]['identifier']|pid_url('ror') }}" aria-label="{{ creatibutor.person_or_org.name }}'s ROR Profile" title="{{ creatibutor.person_or_org.name }}'s ROR Profile">
   <img alt=""  class="inline-id-icon" src="{{ url_for('static', filename='images/ror-icon.svg') }}" />
 </a>
-{%- endif %}
-{% endfor %}
+{%- endif -%}
+{%- endfor -%}
 {# if no identifiers: distinguish btw people and organizations #}
-{%- if not identifier_found.value and creatibutor.person_or_org.type == 'organizational'%}
+{%- if not identifier_found.value and creatibutor.person_or_org.type == 'organizational' -%}
 <i class="group icon"></i>
-{%- endif %}
-{% endmacro %}
+{%- endif -%}
+{%- endmacro -%}
 
-{% macro show_creatibutors(creatibutors, show_affiliations=False) %}
-  {% for creatibutor in creatibutors %}
+{%- macro show_creatibutors(creatibutors, show_affiliations=False) -%}
+  {%- for creatibutor in creatibutors -%}
   <span class="creatibutor">
     <a
       class="ui tooltip-popup text-muted"
-      {% if show_affiliations and creatibutor.affiliations %}
+      {%- if show_affiliations and creatibutor.affiliations %}
         data-content="{{ creatibutor.affiliations|join('; ', attribute='1') }}"
-      {% endif %}
+      {%- endif %}
       href="{{url_for('invenio_search_ui.search', q='metadata.creators.person_or_org.name:"' + creatibutor.person_or_org.name + '"')}}">
-      {{ creatibutor.person_or_org.name }}
+      {{- creatibutor.person_or_org.name -}}
       </a>
     <sup class="font-tiny">
-      {% for affiliation in creatibutor.affiliations %}
+      {%- for affiliation in creatibutor.affiliations -%}
         {{ affiliation[0] }}{{ ", " if not loop.last }}
-      {% endfor %}
+      {%- endfor -%}
     </sup>
     {{ "; " if not loop.last }}
   </span>
