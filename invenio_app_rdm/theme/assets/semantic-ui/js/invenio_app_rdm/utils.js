@@ -70,8 +70,7 @@ export function SearchItemCreators({creators}) {
   }
   return creators.map((creator, index) => (
     <span class="creatibutor" key={index}>
-      {getIcon(creator)}
-      {getLink(creator)}
+      {getIcon(creator)}{getLink(creator)}
       {index < creators.length - 1 && ";"}
     </span>
   ));
