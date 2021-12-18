@@ -31,7 +31,7 @@
 
 {% macro show_creatibutors(creatibutors, show_affiliations=False) %}
   {% for creatibutor in creatibutors %}
-    {{ creatibutor_icon(creatibutor) }}
+  <span class="creatibutor">
     <a
       class="ui tooltip-popup text-muted"
       {% if show_affiliations and creatibutor.affiliations %}
@@ -46,6 +46,7 @@
       {% endfor %}
     </sup>
     {{ "; " if not loop.last }}
+  </span>
     {% endfor %}
 
 {%- endmacro %}
