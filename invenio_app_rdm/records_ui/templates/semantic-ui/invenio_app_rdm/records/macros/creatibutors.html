@@ -41,12 +41,14 @@
       href="{{url_for('invenio_search_ui.search', q='metadata.creators.person_or_org.name:"' + creatibutor.person_or_org.name + '"')}}">
       {{- creatibutor.person_or_org.name -}}
       </a>
+     {%- if show_affiliations and creatibutor.affiliations -%}
     <sup class="font-tiny">
       {%- for affiliation in creatibutor.affiliations -%}
         {{ affiliation[0] }}{{ ", " if not loop.last }}
       {%- endfor -%}
     </sup>
-    {{ "; " if not loop.last }}
+      {% endif %}
+      {{- ";" if not loop.last -}}
   </span>
     {% endfor %}
 
