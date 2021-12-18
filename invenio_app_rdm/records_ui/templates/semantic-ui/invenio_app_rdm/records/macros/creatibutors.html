@@ -32,6 +32,7 @@
 {%- macro show_creatibutors(creatibutors, show_affiliations=False) -%}
   {%- for creatibutor in creatibutors -%}
   <span class="creatibutor">
+    {{- creatibutor_icon(creatibutor) -}}
     <a
       class="ui tooltip-popup text-muted"
       {%- if show_affiliations and creatibutor.affiliations %}
