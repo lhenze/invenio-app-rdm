@@ -101,7 +101,7 @@ export const RDMDepositResults = ({
         <Grid.Row>
           <Grid.Column width={16}>
             <Segment>
-              <Grid>
+              <Grid id="results" aria-label={i18next.t("search results")}>
                 <Grid.Row
                   verticalAlign="middle"
                   className="small padding-tb-5 deposit-result-header"
