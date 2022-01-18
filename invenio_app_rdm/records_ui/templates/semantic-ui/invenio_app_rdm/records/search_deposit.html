@@ -8,6 +8,10 @@
 {%- set title = _("Uploads") %}
 {%- extends config.BASE_TEMPLATE %}
 
+{%- block bypasslinks %}
+{{ super() }}
+<a class="skip-link" href="#results">{{_('Skip to results')}}</a>
+{%- endblock bypasslinks %}
 
 {%- block javascript %}
 {{ super() }}
