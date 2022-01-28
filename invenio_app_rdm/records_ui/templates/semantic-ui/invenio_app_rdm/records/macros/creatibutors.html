@@ -54,7 +54,7 @@
   {% for affiliation in affiliations %}
       {{ affiliation[0] }}.
       {%- if affiliation[2] %}
-        <a href="https://ror.org/{{affiliation[2]}}"><img class="inline-id-icon" src="{{ url_for('static', filename='images/ror-icon.svg') }}"/></a>
+        <a href="https://ror.org/{{affiliation[2]}}" aria-label="{{ affiliation[1] }}: {{ _("ROR profile") }}"><img class="inline-id-icon" src="{{ url_for('static', filename='images/ror-icon.svg') }}" alt="" /></a>
       {%- endif %}
       {{affiliation[1]}}
     <br />
