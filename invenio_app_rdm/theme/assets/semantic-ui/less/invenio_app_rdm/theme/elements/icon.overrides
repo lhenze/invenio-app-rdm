@@ -4,6 +4,7 @@
 
 .inline-id-icon {
   height: @fontSizeBase;
+  min-height: 16px;
   width: auto;
   vertical-align: text-bottom;
 }
