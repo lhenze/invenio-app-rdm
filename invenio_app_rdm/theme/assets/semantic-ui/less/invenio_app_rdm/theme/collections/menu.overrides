@@ -46,7 +46,7 @@
     }
     &.right.right-navbar {
        padding-right: 0;
-      .item {
+      > .item {
         padding-left: 15px;
         margin-right: 15px;
       }
@@ -57,12 +57,17 @@
     padding-right: 15px;
   }
 
-  .user-profile {
-    a.ui.button {
-      width: 13em;
+  #user-profile-dropdown {
+    #user-profile-dropdown-btn {
+      width: 13rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    #user-profile-menu.ui.menu {
+      margin-left: .25rem;
+      width: 13rem;
     }
   }
 }
