@@ -67,12 +67,21 @@
     }
   }
 
-  .user-profile {
-    a.ui.button {
-      width: 13em;
+  .rdm-plus-menu {
+    padding-right: 15px;
+  }
+
+  #user-profile-dropdown {
+    #user-profile-dropdown-btn {
+      width: 13rem;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+
+    #user-profile-menu.ui.menu {
+      margin-left: .25rem;
+      width: 13rem;
     }
   }
 }

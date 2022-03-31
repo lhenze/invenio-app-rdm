@@ -1,4 +1,4 @@
-import $ from "jquery";
+import jquery from 'jquery';
 
 /* Expand and collapse navbar  */
 const toggleIcon = $("#rdm-burger-menu-icon");
@@ -38,23 +38,20 @@ $tabElement.on("keydown", function (event) {
 });
 
 
-$(".ui.accordion.affiliations").accordion({
-  selector: {
-    trigger: ".title .affiliations-button",
-  },
-});
-
-
-$(".ui.accordion .title").on("keydown", function (event) {
-  const $target = $(event.target);
-  if ($target.is(".title") && event.key === "Enter") {
-    let classList = Array.from(event.target.classList);
-
-    if (classList.indexOf("active") > -1) {
-      $target.accordion("close");
-    } else {
-      $target.accordion("open");
+/* User profile dropdown */
+jquery('#user-profile-dropdown.ui.dropdown')
+  .dropdown({
+    showOnFocus: false,
+    selectOnKeydown: false,
+    action: (text, value, element) => {
+      // needed to trigger navigation on keyboard interaction
+      let path = element.attr('href');
+      window.location.pathname=path;
+    },
+    onShow: () => {
+      jquery('#user-profile-dropdown-btn').attr('aria-expanded', true)
+    },
+    onHide: () => {
+      jquery('#user-profile-dropdown-btn').attr('aria-expanded', false)
     }
-  }
-});
-
+  });
