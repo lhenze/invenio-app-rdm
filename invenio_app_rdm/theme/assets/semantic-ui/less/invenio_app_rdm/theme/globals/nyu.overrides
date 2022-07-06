@@ -1,0 +1,12 @@
+
+// NYU Overrides
+
+#invenio-menu .right.menu .ui.button{
+  background-color: #fff2;
+  color: #FFFFFF;
+  text-shadow: none;
+  background-image: none;
+  box-shadow:inset 0px 0px 0px 1px #ffffff9e;
+}
+
+
