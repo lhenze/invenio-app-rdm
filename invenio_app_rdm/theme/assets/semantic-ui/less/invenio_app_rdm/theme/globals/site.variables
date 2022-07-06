@@ -136,3 +136,8 @@
   Separators
 ------------------*/
 @listSeparator: ";";
+
+
+// NYU Variables
+
+@import "nyu.variables";
