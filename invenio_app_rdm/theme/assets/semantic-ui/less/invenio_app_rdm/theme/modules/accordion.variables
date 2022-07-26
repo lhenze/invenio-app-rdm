@@ -7,3 +7,5 @@
   )
 ;
 @secondaryInvertedColor: @invertedMutedTextColor;
+
+@import "accordion_nyu.variables";

@@ -1,0 +1,3 @@
+@secondaryInvertedRedLightness: 0.1;
+@secondaryInvertedRedBackground: #871c4b;
+@secondaryInvertedColor: @invertedMutedTextColor;
