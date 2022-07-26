@@ -64,6 +64,12 @@
             {%- endif %}
 
             {%- block navbar_nav %}
+            <div class="item">
+              <a href="{{ url_for('invenio_search_ui.search') }}">
+                Browse all
+              </a>
+            </div>
+
               {%- for item in current_menu.submenu('main').children|sort(attribute='order') if item.visible recursive %}
                 {%- if item.children %}
                   <div class="item">
@@ -93,6 +99,7 @@
                   <a role="menuitem" href="{{ item.url }}">{{ item.text|safe }}</a>
                 </div>
               {% endfor %}
+
             {%- endblock navbar_nav %}
 
             {%- block navbar_right %}
