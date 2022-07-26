@@ -14,44 +14,24 @@
       <div class="ui container">
         {%- block footer_top_left %}
           <div class="ui grid">
-            <div class="rdm-footer five wide tablet two wide computer column">
-              <h2 class="ui small header">{{_("About InvenioRDM")}}</h2>
-              {% trans invenio_rdm="http://inveniosoftware.org/products/rdm" %}
-              <p><a href="{{invenio_rdm}}">Product page</a></p>
-              {% endtrans %}
-              {% trans invenio_rdm_features="https://inveniosoftware.org/products/rdm/#features" %}
-              <p><a href="{{invenio_rdm_features}}">Features</a></p>
-              {% endtrans %}
-              {% trans invenio_rdm_roadmap="https://inveniosoftware.org/products/rdm/roadmap/" %}
-              <p><a href="{{invenio_rdm_roadmap}}">Roadmap</a></p>
-              {% endtrans %}
-              {% trans invenio_rdm_demo_site="http://inveniordm.web.cern.ch" %}
-              <p><a href="{{invenio_rdm_demo_site}}">Demo site</a></p>
-              {% endtrans %}
+            <div class="rdm-footer five wide tablet three wide computer column">
+              <h2 class="ui small header">About UltraViolet</h2>
+              <p><a href="{{ config.UV_POLICIES }}">Service Policies</a></p>
+              <p><a href="{{ config.UV_DOCS }}">Project Documentation</a></p>
+              <p><a href="{{ config.UV_CURATION_ASSISTANCE }}">Deposit Assistance</a></p>
             </div>
-            <div class="rdm-footer five wide tablet two wide computer column">
-              <h2 class="ui small header">{{_ ("Get involved")}}</h2>
-              {% trans invenio_rdm_gh="https://github.com/inveniosoftware/invenio-app-rdm" %}
-              <p><a href="{{invenio_rdm_gh}}">GitHub</a></p>
-              {% endtrans %}
-              {% trans invenio_rdm_milestones="https://github.com/inveniosoftware/product-rdm" %}
-              <p><a href="{{invenio_rdm_milestones}}">Project Milestones</a></p>
-              {% endtrans %}
-              {% trans invenio_rdm_docs_site="http://inveniordm.docs.cern.ch" %}
-              <p><a href="{{invenio_rdm_docs_site}}">Documentation</a></p>
-              {% endtrans %}
+            <div class="rdm-footer five wide tablet four wide computer column">
+              <h2 class="ui small header">Partnerships</h2>
+              <p><a href="{{ config.DLTS_HOMEPAGE }}">NYU Digital Library Technology Services</a></p>
+              <p><a href="{{ config.DCN_HOMEPAGE }}">Data Curation Network</a></p>
+              <p><a href="{{ config.RDM_DOCS_HOMEPAGE }}">InvenioRDM</a></p>
+              <p><a href="{{ config.OSF_HOMEPAGE }}">Open Science Framework</a></p>
             </div>
-            <div class="rdm-footer five wide tablet two wide computer column">
-              <h2 class="ui small header">{{_ ("Community")}}</h2>
-              {% trans invenio_rdm_chatroom="https://discord.gg/8qatqBC" %}
-              <p><a href="{{invenio_rdm_chatroom}}">Chatroom</a></p>
-              {% endtrans %}
-              {% trans invenio_rdm_talk="https://invenio-talk.web.cern.ch/c/projects/invenio-rdm" %}
-              <p><a href="{{invenio_rdm_talk}}">Forum</a></p>
-              {% endtrans %}
-              {% trans invenio_events="https://inveniosoftware.org/events/" %}
-              <p><a href="{{invenio_events}}">Events & training</a></p>
-              {% endtrans %}
+            <div class="rdm-footer five wide tablet four wide computer column">
+              <h2 class="ui small header">Resources</h2>
+              <p><a href="{{ config.DATA_SERVICES_HOMEPAGE }}">Data Services</a></p>
+              <p><a href="{{ config.NYU_LIBRARIES_HOMEPAGE }}">NYU Libraries</a></p>
+              <p><a href="{{ config.SCIP_HOMEPAGE }}">NYU Scholarly Communication and Information Policy</a></p>
             </div>
 
           {%- endblock footer_top_left %}
@@ -69,8 +49,7 @@
         <div class="ui grid">
           <div class="eight wide column left middle aligned">
             {%- block footer_bottom_left %}
-            {% trans invenio_rdm="http://inveniosoftware.org/products/rdm" %}Powered by <a
-              href="{{invenio_rdm}}">InvenioRDM</a>{% endtrans %}
+            {{ config.THEME_SITENAME }} v{{ config.UV_VERSION }} relies on <a href="{{ config.RDM_HOMEPAGE }}">InvenioRDM</a>
             {%- endblock footer_bottom_left %}
           </div>
           <div class="eight wide column right aligned">
@@ -79,6 +58,7 @@
             {% from "invenio_i18n/macros/language_selector.html" import language_selector_dropdown %}
             {{ language_selector_dropdown() }}
             {%- endif %}
+            <a href="https://www.nyu.edu/footer/accessibility.html">Accessibility</a>
             {%- endblock footer_bottom_right %}
           </div>
         </div>
