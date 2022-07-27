@@ -14,10 +14,10 @@ body {
     }
 
     &:focus {
-      color: @linkColorHover;
+      color: @linkColorHover !important;
       background-color: inherit;
       //box-shadow: 0 0 1px 1px #ec00f4;
-      outline: 3px solid @linkColorActive;
+      outline: 3px solid @linkColorActive !important;
     }
 
     &:active,
@@ -43,7 +43,23 @@ body {
     background-image: none;
     box-shadow: inset 0px 0px 0px 1px #ffffff9e;
   }
+  // Top Navbar Links
+  #invenio-nav .item a {
+    color: #ffffff !important;
+    &:focus {
+      color: #ffffff !important;
+      background-color: inherit;
+      //box-shadow: 0 0 1px 1px #ec00f4;
+      outline: 3px solid @linkColorActive !important;
+    }
 
+    &:active,
+    &:hover:focus {
+      color: #ffffff;
+      outline: none;
+    }
+
+  }
   .ui.search.button {
     background-color: @searchButtonColor  !important;
 
@@ -75,9 +91,9 @@ body {
     &.access-status.open,
     &.access-status.embargoed,
     &.neutral {
-      background-color: transparent;
-      border: none;
-      color: @darkGray;
+      background-color: transparent !important;
+      border: none !important;
+      color: @darkGray !important;;
       margin-left: 0;
       padding: 0;
       border: 0;
