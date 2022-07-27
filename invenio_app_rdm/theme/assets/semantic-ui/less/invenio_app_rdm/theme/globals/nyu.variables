@@ -10,7 +10,7 @@
 
 @brandPrimary: #8900e1;
 @primaryColor: #57068c;
-@secondaryColor: #9073fb;
+@secondaryColor: #330662;
 @featuredListBackgroundColor: #4899DB;
 @primaryDarkenColor: #8900e1;
 
