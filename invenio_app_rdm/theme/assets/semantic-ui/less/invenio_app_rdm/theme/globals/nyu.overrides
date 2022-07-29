@@ -14,9 +14,7 @@ body {
     }
 
     &:focus {
-      color: @linkColorHover !important;
       background-color: inherit;
-      //box-shadow: 0 0 1px 1px #ec00f4;
       outline: 3px solid @linkColorActive !important;
     }
 
@@ -45,9 +43,9 @@ body {
   }
   // Top Navbar Links
   #invenio-nav .item a {
-    color: #ffffff !important;
+   // color: #ffffff !important;
     &:focus {
-      color: #ffffff !important;
+     // color: #ffffff !important;
       background-color: inherit;
       //box-shadow: 0 0 1px 1px #ec00f4;
       outline: 3px solid @linkColorActive !important;
